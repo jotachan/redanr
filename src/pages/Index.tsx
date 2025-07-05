@@ -55,9 +55,11 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center">
-                <Leaf className="w-6 h-6 text-white" />
-              </div>
+              <img 
+                src="/lovable-uploads/dc062be3-d94c-460a-8534-b007ccf0fcb0.png" 
+                alt="Logo Red de Apicultura Natural Regenerativa"
+                className="w-12 h-12 object-contain"
+              />
               <h1 className="text-xl font-bold text-green-800">Red de Apicultura Natural Regenerativa</h1>
             </div>
             <Button 
@@ -272,9 +274,11 @@ const Index = () => {
       <footer className="bg-green-800 text-white py-8 px-4">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-4">
-            <div className="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center">
-              <Leaf className="w-5 h-5 text-white" />
-            </div>
+            <img 
+              src="/lovable-uploads/dc062be3-d94c-460a-8534-b007ccf0fcb0.png" 
+              alt="Logo Red de Apicultura Natural Regenerativa"
+              className="w-8 h-8 object-contain bg-white rounded p-1"
+            />
             <h4 className="text-xl font-bold">Red de Apicultura Natural Regenerativa</h4>
           </div>
           <p className="text-green-200 mb-4">
