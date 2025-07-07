@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Download, Users, Leaf, Phone, Mail, MapPin, PlayCircle, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -39,9 +40,9 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-amber-50 to-stone-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-red-50">
       {/* Header */}
-      <header className="bg-white/90 backdrop-blur-sm border-b border-green-200 sticky top-0 z-50">
+      <header className="bg-white/90 backdrop-blur-sm border-b border-orange-200 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -50,11 +51,11 @@ const Index = () => {
                 alt="Logo Red de Apicultura Natural Regenerativa"
                 className="w-12 h-12 object-contain"
               />
-              <h1 className="text-xl font-bold text-green-800">Red de Apicultura Natural Regenerativa</h1>
+              <h1 className="text-xl font-bold text-orange-800">Red de Apicultura Natural Regenerativa</h1>
             </div>
             <Button 
               onClick={handleDownload}
-              className="bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+              className="bg-orange-700 hover:bg-orange-800 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
             >
               <Download className="w-4 h-4 mr-2" />
               Descargar Estándares
@@ -85,7 +86,7 @@ const Index = () => {
               <Button 
                 onClick={handleDownload}
                 size="lg" 
-                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-xl"
+                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Obtener Estándares de Producción
@@ -98,18 +99,18 @@ const Index = () => {
       {/* Principios Section */}
       <section className="py-16 px-4 bg-white/60">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-bold text-center text-green-800 mb-12">
+          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12">
             Los 6 Principios de la Apicultura Natural Regenerativa
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {principios.map((principio, index) => (
-              <Card key={index} className="bg-white/90 border-green-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <Card key={index} className="bg-white/90 border-orange-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center mb-4">
                     <span className="text-white font-bold text-lg">{index + 1}</span>
                   </div>
-                  <h4 className="text-xl font-semibold text-green-800 mb-3">{principio.title}</h4>
-                  <p className="text-green-700">{principio.description}</p>
+                  <h4 className="text-xl font-semibold text-orange-800 mb-3">{principio.title}</h4>
+                  <p className="text-orange-700">{principio.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -120,16 +121,16 @@ const Index = () => {
       {/* Logos de Integrantes */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-bold text-center text-green-800 mb-12">
+          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12">
             Nuestros Integrantes
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {Array.from({ length: 10 }, (_, i) => (
-              <div key={i} className="bg-white/90 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-green-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <div key={i} className="bg-white/90 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-orange-100">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-center text-green-800 font-medium">Apicultor {i + 1}</p>
+                <p className="text-center text-orange-800 font-medium">Apicultor {i + 1}</p>
               </div>
             ))}
           </div>
@@ -139,7 +140,7 @@ const Index = () => {
       {/* Galería de Fotos */}
       <section className="py-16 px-4 bg-white/60">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-bold text-center text-green-800 mb-12">
+          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12">
             Nuestro Trabajo en Imágenes
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -167,7 +168,7 @@ const Index = () => {
       {/* Territorios Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <div className="bg-gradient-to-r from-green-700 to-green-800 rounded-2xl p-12 text-white text-center">
+          <div className="bg-gradient-to-r from-orange-700 to-red-700 rounded-2xl p-12 text-white text-center">
             <h3 className="text-4xl font-bold mb-6">
               "La apicultura regenerativa trasciende fronteras y conecta territorios"
             </h3>
@@ -199,17 +200,17 @@ const Index = () => {
       {/* Podcast y YouTube Section */}
       <section className="py-16 px-4 bg-white/60">
         <div className="container mx-auto text-center">
-          <h3 className="text-4xl font-bold text-green-800 mb-8">
+          <h3 className="text-4xl font-bold text-orange-800 mb-8">
             Nuestro Contenido Digital
           </h3>
-          <p className="text-xl text-green-700 mb-8">
+          <p className="text-xl text-orange-700 mb-8">
             Conversaciones profundas sobre apicultura regenerativa y sostenibilidad
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               onClick={() => window.open('https://open.spotify.com', '_blank')}
               size="lg"
-              className="bg-green-700 hover:bg-green-800 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+              className="bg-orange-700 hover:bg-orange-800 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
             >
               <PlayCircle className="w-5 h-5 mr-2" />
               Escuchar en Spotify
@@ -230,10 +231,10 @@ const Index = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-4xl font-bold text-green-800 mb-8">
+            <h3 className="text-4xl font-bold text-orange-800 mb-8">
               Únete a la Regeneración
             </h3>
-            <div className="bg-gradient-to-r from-green-700 to-green-800 rounded-2xl p-12 text-white">
+            <div className="bg-gradient-to-r from-orange-700 to-red-700 rounded-2xl p-12 text-white">
               <p className="text-2xl font-light mb-6 italic">
                 "Cada colmena es un universo de sabiduría ancestral. Cada abeja, un maestro de la sostenibilidad. 
                 Juntos, tejemos la red que regenera nuestros territorios."
@@ -247,7 +248,7 @@ const Index = () => {
                   info@apicultura-regenerativa.org
                 </a>
               </div>
-              <p className="text-green-100 mt-4">
+              <p className="text-orange-100 mt-4">
                 Conecta con nosotros y sé parte del cambio
               </p>
             </div>
@@ -256,7 +257,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-green-800 text-white py-8 px-4">
+      <footer className="bg-orange-800 text-white py-8 px-4">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <img 
@@ -266,10 +267,10 @@ const Index = () => {
             />
             <h4 className="text-xl font-bold">Red de Apicultura Natural Regenerativa</h4>
           </div>
-          <p className="text-green-200 mb-4">
+          <p className="text-orange-200 mb-4">
             Regenerando ecosistemas, una colmena a la vez
           </p>
-          <div className="flex justify-center space-x-6 text-green-200">
+          <div className="flex justify-center space-x-6 text-orange-200">
             <div className="flex items-center">
               <MapPin className="w-4 h-4 mr-2" />
               Latinoamérica
