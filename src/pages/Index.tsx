@@ -74,13 +74,20 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
+      <section className="relative py-20 px-4 min-h-[80vh] flex items-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/lovable-uploads/9c2542aa-626d-4052-b6ed-66e1f180efa1.png)'
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-6xl font-bold text-green-800 mb-6 animate-fade-in">
-              Apicultura que <span className="text-amber-500">Regenera</span> la Naturaleza
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg">
+              Apicultura que <span className="text-amber-400">Regenera</span> la Naturaleza
             </h2>
-            <p className="text-xl text-green-700 mb-8 leading-relaxed animate-fade-in">
+            <p className="text-xl text-white/90 mb-8 leading-relaxed animate-fade-in drop-shadow-md">
               Somos una red de apicultores comprometidos con prácticas sostenibles que respetan 
               el equilibrio natural y fortalecen los ecosistemas locales
             </p>
