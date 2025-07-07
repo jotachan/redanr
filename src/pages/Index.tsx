@@ -1,23 +1,13 @@
-
 import React from 'react';
-import { Download, Users, Leaf, Phone, Mail, MapPin, PlayCircle } from 'lucide-react';
+import { Download, Users, Leaf, Phone, Mail, MapPin, PlayCircle, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
 
 const Index = () => {
   const handleDownload = () => {
     toast.success("Descarga iniciada", {
       description: "El documento de estándares se está descargando"
-    });
-  };
-
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Mensaje enviado", {
-      description: "Te contactaremos pronto"
     });
   };
 
@@ -206,73 +196,61 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Podcast Section */}
+      {/* Podcast y YouTube Section */}
       <section className="py-16 px-4 bg-white/50">
         <div className="container mx-auto text-center">
           <h3 className="text-4xl font-bold text-green-800 mb-8">
-            Escucha Nuestro Podcast
+            Nuestro Contenido Digital
           </h3>
           <p className="text-xl text-green-700 mb-8">
             Conversaciones profundas sobre apicultura regenerativa y sostenibilidad
           </p>
-          <Button 
-            onClick={() => window.open('https://open.spotify.com', '_blank')}
-            size="lg"
-            className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
-          >
-            <PlayCircle className="w-5 h-5 mr-2" />
-            Escuchar en Spotify
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              onClick={() => window.open('https://open.spotify.com', '_blank')}
+              size="lg"
+              className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              <PlayCircle className="w-5 h-5 mr-2" />
+              Escuchar en Spotify
+            </Button>
+            <Button 
+              onClick={() => window.open('https://youtube.com', '_blank')}
+              size="lg"
+              className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              <Youtube className="w-5 h-5 mr-2" />
+              Ver en YouTube
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* Formulario de Contacto */}
+      {/* Sección de Contacto con Texto Inspirador */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-4xl font-bold text-center text-green-800 mb-12">
-              Conecta con Nosotros
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-4xl font-bold text-green-800 mb-8">
+              Únete a la Regeneración
             </h3>
-            <Card className="bg-white/80 border-amber-200">
-              <CardContent className="p-8">
-                <form onSubmit={handleContactSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-green-700 font-medium mb-2">Nombre</label>
-                      <Input 
-                        placeholder="Tu nombre completo"
-                        className="border-amber-200 focus:border-amber-500"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-green-700 font-medium mb-2">Email</label>
-                      <Input 
-                        type="email"
-                        placeholder="tu@email.com"
-                        className="border-amber-200 focus:border-amber-500"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-green-700 font-medium mb-2">Mensaje</label>
-                    <Textarea 
-                      placeholder="Cuéntanos sobre tu interés en la apicultura regenerativa..."
-                      className="border-amber-200 focus:border-amber-500 min-h-32"
-                      required
-                    />
-                  </div>
-                  <Button 
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-green-600 to-amber-600 hover:from-green-700 hover:to-amber-700 text-white font-bold py-3 rounded-full transition-all duration-300 hover:scale-105"
-                  >
-                    <Mail className="w-4 h-4 mr-2" />
-                    Enviar Mensaje
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            <div className="bg-gradient-to-r from-green-600 to-amber-600 rounded-2xl p-12 text-white">
+              <p className="text-2xl font-light mb-6 italic">
+                "Cada colmena es un universo de sabiduría ancestral. Cada abeja, un maestro de la sostenibilidad. 
+                Juntos, tejemos la red que regenera nuestros territorios."
+              </p>
+              <div className="flex items-center justify-center space-x-3 text-lg">
+                <Mail className="w-6 h-6" />
+                <a 
+                  href="mailto:info@apicultura-regenerativa.org"
+                  className="hover:text-amber-200 transition-colors underline decoration-2 underline-offset-4"
+                >
+                  info@apicultura-regenerativa.org
+                </a>
+              </div>
+              <p className="text-amber-100 mt-4">
+                Conecta con nosotros y sé parte del cambio
+              </p>
+            </div>
           </div>
         </div>
       </section>
