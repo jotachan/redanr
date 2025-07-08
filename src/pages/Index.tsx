@@ -51,7 +51,7 @@ const Index = () => {
                 alt="Logo Red de Apicultura Natural Regenerativa"
                 className="w-12 h-12 object-contain"
               />
-              <h1 className="text-xl font-bold text-orange-800">Red de Apicultura Natural Regenerativa</h1>
+              <h1 className="text-xl font-bold text-orange-800 font-dancing">Red de Apicultura Natural Regenerativa</h1>
             </div>
             <Button 
               onClick={handleDownload}
@@ -75,10 +75,10 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg">
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg font-dancing">
               Apicultura que <span className="text-amber-300">Regenera</span> la Naturaleza
             </h2>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed animate-fade-in drop-shadow-md">
+            <p className="text-xl text-white/90 mb-8 leading-relaxed animate-fade-in drop-shadow-md font-light">
               Somos una red de apicultores comprometidos con prácticas sostenibles que respetan 
               el equilibrio natural y fortalecen los ecosistemas locales
             </p>
@@ -99,7 +99,7 @@ const Index = () => {
       {/* Principios Section */}
       <section className="py-16 px-4 bg-white/60">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12">
+          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12 font-dancing">
             Los 6 Principios de la Apicultura Natural Regenerativa
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -109,8 +109,8 @@ const Index = () => {
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center mb-4">
                     <span className="text-white font-bold text-lg">{index + 1}</span>
                   </div>
-                  <h4 className="text-xl font-semibold text-orange-800 mb-3">{principio.title}</h4>
-                  <p className="text-orange-700">{principio.description}</p>
+                  <h4 className="text-xl font-semibold text-orange-800 mb-3 font-medium">{principio.title}</h4>
+                  <p className="text-orange-700 font-light">{principio.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -121,7 +121,7 @@ const Index = () => {
       {/* Logos de Integrantes */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12">
+          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12 font-dancing">
             Nuestros Integrantes
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -140,7 +140,7 @@ const Index = () => {
       {/* Galería de Fotos */}
       <section className="py-16 px-4 bg-white/60">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12">
+          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12 font-dancing">
             Nuestro Trabajo en Imágenes
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -169,10 +169,10 @@ const Index = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="bg-gradient-to-r from-orange-700 to-red-700 rounded-2xl p-12 text-white text-center">
-            <h3 className="text-4xl font-bold mb-6">
+            <h3 className="text-4xl font-bold mb-6 font-dancing">
               "La apicultura regenerativa trasciende fronteras y conecta territorios"
             </h3>
-            <p className="text-xl mb-8 opacity-90">
+            <p className="text-xl mb-8 opacity-90 font-light">
               De montañas a valles, de bosques a praderas, nuestras prácticas se adaptan y regeneran cada ecosistema único
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-8">
@@ -200,10 +200,10 @@ const Index = () => {
       {/* Podcast y YouTube Section */}
       <section className="py-16 px-4 bg-white/60">
         <div className="container mx-auto text-center">
-          <h3 className="text-4xl font-bold text-orange-800 mb-8">
+          <h3 className="text-4xl font-bold text-orange-800 mb-8 font-dancing">
             Nuestro Contenido Digital
           </h3>
-          <p className="text-xl text-orange-700 mb-8">
+          <p className="text-xl text-orange-700 mb-8 font-light">
             Conversaciones profundas sobre apicultura regenerativa y sostenibilidad
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -231,11 +231,11 @@ const Index = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-4xl font-bold text-orange-800 mb-8">
+            <h3 className="text-4xl font-bold text-orange-800 mb-8 font-dancing">
               Únete a la Regeneración
             </h3>
             <div className="bg-gradient-to-r from-orange-700 to-red-700 rounded-2xl p-12 text-white">
-              <p className="text-2xl font-light mb-6 italic">
+              <p className="text-2xl font-light mb-6 italic font-dancing">
                 "Cada colmena es un universo de sabiduría ancestral. Cada abeja, un maestro de la sostenibilidad. 
                 Juntos, tejemos la red que regenera nuestros territorios."
               </p>
@@ -243,12 +243,12 @@ const Index = () => {
                 <Mail className="w-6 h-6" />
                 <a 
                   href="mailto:info@apicultura-regenerativa.org"
-                  className="hover:text-amber-200 transition-colors underline decoration-2 underline-offset-4"
+                  className="hover:text-amber-200 transition-colors underline decoration-2 underline-offset-4 font-medium"
                 >
                   info@apicultura-regenerativa.org
                 </a>
               </div>
-              <p className="text-orange-100 mt-4">
+              <p className="text-orange-100 mt-4 font-light">
                 Conecta con nosotros y sé parte del cambio
               </p>
             </div>
@@ -265,9 +265,9 @@ const Index = () => {
               alt="Logo Red de Apicultura Natural Regenerativa"
               className="w-8 h-8 object-contain bg-white rounded p-1"
             />
-            <h4 className="text-xl font-bold">Red de Apicultura Natural Regenerativa</h4>
+            <h4 className="text-xl font-bold font-dancing">Red de Apicultura Natural Regenerativa</h4>
           </div>
-          <p className="text-orange-200 mb-4">
+          <p className="text-orange-200 mb-4 font-light">
             Regenerando ecosistemas, una colmena a la vez
           </p>
           <div className="flex justify-center space-x-6 text-orange-200">
