@@ -15,27 +15,55 @@ const Index = () => {
   const principios = [
     {
       title: "Respeto al Ciclo Natural",
-      description: "Trabajamos siguiendo los ritmos naturales de las abejas y las estaciones"
+      description: "Conoce y respeta los patrones de comportamiento y ciclos naturales del organismo colmena"
     },
     {
-      title: "Biodiversidad Activa", 
-      description: "Fomentamos la diversidad de flora para un ecosistema equilibrado"
-    },
-    {
-      title: "Manejo Mínimo",
-      description: "Intervenciones respetuosas que no alteren el comportamiento natural"
-    },
-    {
-      title: "Sostenibilidad Territorial",
-      description: "Prácticas que regeneran y mejoran los ecosistemas locales"
+      title: "Biodiversidad Activa",
+      description: "Comprende a las abejas en tu contexto ecosistémico"
     },
     {
       title: "Calidad sin Químicos",
-      description: "Producción libre de químicos sintéticos y tratamientos agresivos"
+      description: "No ataques a tus colmenas con productos químicos y alimentos artificiales"
     },
     {
       title: "Conocimiento Ancestral",
-      description: "Integración de saberes tradicionales con técnicas modernas"
+      description: "Poliproductividad y equilibrio en las cosechas "
+    },
+    {
+      title: "Manejo Mínimo",
+      description: "Realiza tus intervenciones en base a la observación"
+    },
+    {
+      title: "Sostenibilidad Territorial",
+      description: "Co-crear nuevas economías, circuitos cortos y precios justos"
+    }
+  ];
+
+  const apicultores = [
+    {
+      src: "images/logos/AnrEscuela.jpeg",
+      title: "Escuela de Apicultura Natural Regenerativa",
+      link: "https://www.apiculturanatural.com/"
+    },
+    {
+      src: "images/logos/apivet.png",
+      title: "ApiVet",
+      link: "https://www.instagram.com/apivet.cl/"
+    },
+    {
+      src: "images/logos/valymu.jpeg",
+      title: "Valymu",
+      link: "https://www.instagram.com/valymu.cl/"
+    },
+    {
+      src: "images/logos/Raices.jpeg",
+      title: "Raíces del Viento",
+      link: "https://www.instagram.com/raicesdelviento/"
+    },
+    {
+      src: "images/logos/AbejaDorada.jpg",
+      title: "Abeja Dorada",
+      link: "https://www.instagram.com/abejadoradacl/"
     }
   ];
 
@@ -46,14 +74,14 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/lovable-uploads/dc062be3-d94c-460a-8534-b007ccf0fcb0.png" 
+              <img
+                src="/images/logos/ANR_200.png"
                 alt="Logo Red de Apicultura Natural Regenerativa"
                 className="w-12 h-12 object-contain"
               />
               <h1 className="text-xl font-bold text-orange-800 font-dancing">Red de Apicultura Natural Regenerativa</h1>
             </div>
-            <Button 
+            <Button
               onClick={handleDownload}
               className="bg-orange-700 hover:bg-orange-800 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
             >
@@ -66,10 +94,10 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 min-h-[80vh] flex items-center">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/lovable-uploads/9c2542aa-626d-4052-b6ed-66e1f180efa1.png)'
+            backgroundImage: 'url(/images/photos/revision_2.png)'
           }}
         ></div>
         <div className="absolute inset-0 bg-black/50"></div>
@@ -79,13 +107,13 @@ const Index = () => {
               Apicultura que <span className="text-amber-300">Regenera</span> la Naturaleza
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed animate-fade-in drop-shadow-md font-light">
-              Somos una red de apicultores comprometidos con prácticas sostenibles que respetan 
+              Somos una red de apicultores comprometidos con prácticas sostenibles que respetan
               el equilibrio natural y fortalecen los ecosistemas locales
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Button
                 onClick={handleDownload}
-                size="lg" 
+                size="lg"
                 className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <Download className="w-5 h-5 mr-2" />
@@ -125,12 +153,10 @@ const Index = () => {
             Nuestros Integrantes
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {Array.from({ length: 10 }, (_, i) => (
-              <div key={i} className="bg-white/90 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-orange-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <p className="text-center text-orange-800 font-medium">Apicultor {i + 1}</p>
+            {apicultores.map((apicultor, i) => (
+              <div key={i} >
+                <a href={apicultor.link} target='_blank'>
+                  <img src={apicultor.src} title={apicultor.title} className="p-6 transition-all duration-300 hover:scale-105" /></a>
               </div>
             ))}
           </div>
@@ -153,7 +179,7 @@ const Index = () => {
               "photo-1465379944081-7f47de8d74ac"
             ].map((photo, index) => (
               <div key={index} className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <img 
+                <img
                   src={`https://images.unsplash.com/${photo}?auto=format&fit=crop&w=400&h=300`}
                   alt={`Apicultura natural ${index + 1}`}
                   className="w-full h-64 object-cover"
@@ -182,7 +208,7 @@ const Index = () => {
                 { region: "Costas Pacíficas", image: "photo-1465146344425-f00d5f5c8f07" }
               ].map((territorio, index) => (
                 <div key={index} className="relative">
-                  <img 
+                  <img
                     src={`https://images.unsplash.com/${territorio.image}?auto=format&fit=crop&w=300&h=200`}
                     alt={territorio.region}
                     className="w-full h-48 object-cover rounded-lg"
@@ -207,7 +233,7 @@ const Index = () => {
             Conversaciones profundas sobre apicultura regenerativa y sostenibilidad
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
+            <Button
               onClick={() => window.open('https://open.spotify.com', '_blank')}
               size="lg"
               className="bg-orange-700 hover:bg-orange-800 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
@@ -215,7 +241,7 @@ const Index = () => {
               <PlayCircle className="w-5 h-5 mr-2" />
               Escuchar en Spotify
             </Button>
-            <Button 
+            <Button
               onClick={() => window.open('https://youtube.com', '_blank')}
               size="lg"
               className="bg-stone-700 hover:bg-stone-800 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
@@ -235,13 +261,13 @@ const Index = () => {
               Únete a la Regeneración
             </h3>
             <div className="bg-gradient-to-r from-orange-700 to-red-700 rounded-2xl p-12 text-white">
-              <p className="text-2xl font-light mb-6 italic font-dancing">
-                "Cada colmena es un universo de sabiduría ancestral. Cada abeja, un maestro de la sostenibilidad. 
+              <p className="text-2xl font-light mb-6 italic">
+                "Cada colmena es un universo de sabiduría ancestral. Cada abeja, un maestro de la sostenibilidad.
                 Juntos, tejemos la red que regenera nuestros territorios."
               </p>
               <div className="flex items-center justify-center space-x-3 text-lg">
                 <Mail className="w-6 h-6" />
-                <a 
+                <a
                   href="mailto:info@apicultura-regenerativa.org"
                   className="hover:text-amber-200 transition-colors underline decoration-2 underline-offset-4 font-medium"
                 >
@@ -260,8 +286,8 @@ const Index = () => {
       <footer className="bg-orange-800 text-white py-8 px-4">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-4">
-            <img 
-              src="/lovable-uploads/dc062be3-d94c-460a-8534-b007ccf0fcb0.png" 
+            <img
+              src="/lovable-uploads/dc062be3-d94c-460a-8534-b007ccf0fcb0.png"
               alt="Logo Red de Apicultura Natural Regenerativa"
               className="w-8 h-8 object-contain bg-white rounded p-1"
             />
