@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Download, Users, Leaf, Phone, Mail, MapPin, PlayCircle, Youtube } from 'lucide-react';
+import { Download, Users, Leaf, Phone, Mail, MapPin, PlayCircle, Youtube, Headphones, Video, Podcast, Mic } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { toast } from 'sonner';
@@ -67,10 +67,37 @@ const Index = () => {
     }
   ];
 
+  const contenidoDigital = [
+    {
+      titulo: "Conversaciones Regenerativas",
+      descripcion: "Podcast semanal donde exploramos la sabiduría ancestral de la apicultura",
+      icono: Podcast,
+      plataforma: "Spotify",
+      enlace: "https://open.spotify.com",
+      color: "bg-gradient-to-br from-green-600 to-emerald-700"
+    },
+    {
+      titulo: "Documentales en Vivo",
+      descripcion: "Experiencias inmersivas desde nuestros apiarios en diferentes territorios",
+      icono: Video,
+      plataforma: "YouTube",
+      enlace: "https://youtube.com",
+      color: "bg-gradient-to-br from-amber-600 to-orange-700"
+    },
+    {
+      titulo: "Tutoriales Prácticos",
+      descripcion: "Guías paso a paso para implementar técnicas regenerativas",
+      icono: PlayCircle,
+      plataforma: "YouTube",
+      enlace: "https://youtube.com",
+      color: "bg-gradient-to-br from-orange-600 to-red-600"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-red-50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
       {/* Header */}
-      <header className="bg-white/90 backdrop-blur-sm border-b border-orange-200 sticky top-0 z-50">
+      <header className="bg-card/90 backdrop-blur-sm border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -79,11 +106,11 @@ const Index = () => {
                 alt="Logo Red de Apicultura Natural Regenerativa"
                 className="w-12 h-12 object-contain"
               />
-              <h1 className="text-xl font-bold text-orange-800 font-dancing">Red de Apicultura Natural Regenerativa</h1>
+              <h1 className="text-xl font-bold text-primary font-dancing">Red de Apicultura Natural Regenerativa</h1>
             </div>
             <Button
               onClick={handleDownload}
-              className="bg-orange-700 hover:bg-orange-800 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
             >
               <Download className="w-4 h-4 mr-2" />
               Descargar Estándares
@@ -104,7 +131,7 @@ const Index = () => {
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg font-dancing">
-              Apicultura que <span className="text-amber-300">Regenera</span> la Naturaleza
+              Apicultura que <span className="text-accent">Regenera</span> la Naturaleza
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed animate-fade-in drop-shadow-md font-light">
               Somos una red de apicultores comprometidos con prácticas sostenibles que respetan
@@ -114,7 +141,7 @@ const Index = () => {
               <Button
                 onClick={handleDownload}
                 size="lg"
-                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-xl"
+                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Obtener Estándares de Producción
@@ -125,20 +152,20 @@ const Index = () => {
       </section>
 
       {/* Principios Section */}
-      <section className="py-16 px-4 bg-white/60">
+      <section className="py-16 px-4 bg-card/60">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12 font-dancing">
+          <h3 className="text-4xl font-bold text-center text-primary mb-12 font-dancing">
             Los 6 Principios de la Apicultura Natural Regenerativa
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {principios.map((principio, index) => (
-              <Card key={index} className="bg-white/90 border-orange-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <Card key={index} className="bg-card/90 border-border hover:shadow-lg transition-all duration-300 hover:scale-105">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center mb-4">
-                    <span className="text-white font-bold text-lg">{index + 1}</span>
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mb-4">
+                    <span className="text-primary-foreground font-bold text-lg">{index + 1}</span>
                   </div>
-                  <h4 className="text-xl font-semibold text-orange-800 mb-3 font-medium">{principio.title}</h4>
-                  <p className="text-orange-700 font-light">{principio.description}</p>
+                  <h4 className="text-xl font-semibold text-primary mb-3 font-medium">{principio.title}</h4>
+                  <p className="text-muted-foreground font-light">{principio.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -149,7 +176,7 @@ const Index = () => {
       {/* Logos de Integrantes */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12 font-dancing">
+          <h3 className="text-4xl font-bold text-center text-primary mb-12 font-dancing">
             Nuestros Integrantes
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -164,9 +191,9 @@ const Index = () => {
       </section>
 
       {/* Galería de Fotos */}
-      <section className="py-16 px-4 bg-white/60">
+      <section className="py-16 px-4 bg-card/60">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-bold text-center text-orange-800 mb-12 font-dancing">
+          <h3 className="text-4xl font-bold text-center text-primary mb-12 font-dancing">
             Nuestro Trabajo en Imágenes
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -194,7 +221,7 @@ const Index = () => {
       {/* Territorios Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <div className="bg-gradient-to-r from-orange-700 to-red-700 rounded-2xl p-12 text-white text-center">
+          <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-12 text-primary-foreground text-center">
             <h3 className="text-4xl font-bold mb-6 font-dancing">
               "La apicultura regenerativa trasciende fronteras y conecta territorios"
             </h3>
@@ -223,32 +250,63 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Podcast y YouTube Section */}
-      <section className="py-16 px-4 bg-white/60">
-        <div className="container mx-auto text-center">
-          <h3 className="text-4xl font-bold text-orange-800 mb-8 font-dancing">
-            Nuestro Contenido Digital
-          </h3>
-          <p className="text-xl text-orange-700 mb-8 font-light">
-            Conversaciones profundas sobre apicultura regenerativa y sostenibilidad
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              onClick={() => window.open('https://open.spotify.com', '_blank')}
-              size="lg"
-              className="bg-orange-700 hover:bg-orange-800 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              <PlayCircle className="w-5 h-5 mr-2" />
-              Escuchar en Spotify
-            </Button>
-            <Button
-              onClick={() => window.open('https://youtube.com', '_blank')}
-              size="lg"
-              className="bg-stone-700 hover:bg-stone-800 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              <Youtube className="w-5 h-5 mr-2" />
-              Ver en YouTube
-            </Button>
+      {/* Contenido Digital Section - Nueva Propuesta */}
+      <section className="py-16 px-4 bg-card/60">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold text-primary mb-4 font-dancing">
+              Ecosistema Digital Regenerativo
+            </h3>
+            <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
+              Conectamos saberes ancestrales con tecnología moderna para compartir conocimiento 
+              sobre apicultura regenerativa en múltiples formatos
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {contenidoDigital.map((contenido, index) => (
+              <Card key={index} className="bg-card hover:shadow-xl transition-all duration-300 hover:scale-105 border-border overflow-hidden group">
+                <div className={`${contenido.color} p-6 text-white relative overflow-hidden`}>
+                  <div className="absolute top-0 right-0 w-20 h-20 opacity-20">
+                    <contenido.icono className="w-full h-full" />
+                  </div>
+                  <contenido.icono className="w-8 h-8 mb-3 relative z-10" />
+                  <h4 className="text-xl font-bold mb-2 relative z-10">{contenido.titulo}</h4>
+                  <span className="text-sm bg-white/20 px-3 py-1 rounded-full relative z-10">{contenido.plataforma}</span>
+                </div>
+                <CardContent className="p-6">
+                  <p className="text-muted-foreground mb-6 font-light leading-relaxed">
+                    {contenido.descripcion}
+                  </p>
+                  <Button
+                    onClick={() => window.open(contenido.enlace, '_blank')}
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full transition-all duration-300"
+                  >
+                    Explorar Contenido
+                    <PlayCircle className="w-4 h-4 ml-2" />
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-border">
+              <Mic className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h4 className="text-2xl font-bold text-primary mb-3 font-dancing">
+                ¿Tienes una historia que contar?
+              </h4>
+              <p className="text-muted-foreground mb-6 font-light">
+                Invitamos a apicultores de toda Latinoamérica a compartir sus experiencias y conocimientos
+              </p>
+              <Button
+                onClick={() => window.open('mailto:info@apicultura-regenerativa.org', '_blank')}
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-2 rounded-full"
+              >
+                Participar en el Podcast
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -257,10 +315,10 @@ const Index = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-4xl font-bold text-orange-800 mb-8 font-dancing">
+            <h3 className="text-4xl font-bold text-primary mb-8 font-dancing">
               Únete a la Regeneración
             </h3>
-            <div className="bg-gradient-to-r from-orange-700 to-red-700 rounded-2xl p-12 text-white">
+            <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-12 text-primary-foreground">
               <p className="text-2xl font-light mb-6 italic">
                 "Cada colmena es un universo de sabiduría ancestral. Cada abeja, un maestro de la sostenibilidad.
                 Juntos, tejemos la red que regenera nuestros territorios."
@@ -269,12 +327,12 @@ const Index = () => {
                 <Mail className="w-6 h-6" />
                 <a
                   href="mailto:info@apicultura-regenerativa.org"
-                  className="hover:text-amber-200 transition-colors underline decoration-2 underline-offset-4 font-medium"
+                  className="hover:text-accent transition-colors underline decoration-2 underline-offset-4 font-medium"
                 >
                   info@apicultura-regenerativa.org
                 </a>
               </div>
-              <p className="text-orange-100 mt-4 font-light">
+              <p className="text-primary-foreground/80 mt-4 font-light">
                 Conecta con nosotros y sé parte del cambio
               </p>
             </div>
@@ -283,7 +341,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-orange-800 text-white py-8 px-4">
+      <footer className="bg-primary text-primary-foreground py-8 px-4">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <img
@@ -293,10 +351,10 @@ const Index = () => {
             />
             <h4 className="text-xl font-bold font-dancing">Red de Apicultura Natural Regenerativa</h4>
           </div>
-          <p className="text-orange-200 mb-4 font-light">
+          <p className="text-primary-foreground/80 mb-4 font-light">
             Regenerando ecosistemas, una colmena a la vez
           </p>
-          <div className="flex justify-center space-x-6 text-orange-200">
+          <div className="flex justify-center space-x-6 text-primary-foreground/80">
             <div className="flex items-center">
               <MapPin className="w-4 h-4 mr-2" />
               Latinoamérica
