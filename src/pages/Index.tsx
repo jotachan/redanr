@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Users, Leaf, Phone, Mail, MapPin, PlayCircle, Youtube, Headphones, Video, Podcast, Mic, Instagram, BookOpen, Calendar, Star, ShoppingBag, Honey, Package } from 'lucide-react';
+import { Download, Users, Leaf, Phone, Mail, MapPin, PlayCircle, Youtube, Headphones, Video, Podcast, Mic, Instagram, BookOpen, Calendar, Star, ShoppingBag, Droplet, Package } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { toast } from 'sonner';
@@ -570,7 +570,7 @@ const Index = () => {
 
           <div className="mt-12 text-center">
             <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-2xl p-8 border border-border">
-              <Honey className="w-12 h-12 text-primary mx-auto mb-4" />
+              <Droplet className="w-12 h-12 text-primary mx-auto mb-4" />
               <h4 className="text-2xl font-bold text-primary mb-3 font-dancing">
                 ¿Tienes productos para vender?
               </h4>
