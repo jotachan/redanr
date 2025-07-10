@@ -10,16 +10,16 @@ export const GallerySection = () => {
         </h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            "photo-1498936178812-4b2e558d2937",
-            "photo-1465146344425-f00d5f5c8f07",
-            "photo-1509316975850-ff9c5deb0cd9",
-            "photo-1518495973542-4542c06a5843",
-            "photo-1472396961693-142e6e269027",
-            "photo-1465379944081-7f47de8d74ac"
+            "trabajo.png",
+            "apiario 5.png",
+            "cera.png",
+            "cosecha.png",
+            "revision 3.png",
+            "revision 4.png"
           ].map((photo, index) => (
             <div key={index} className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <img
-                src={`https://images.unsplash.com/${photo}?auto=format&fit=crop&w=400&h=300`}
+                src={`images/photos/${photo}`}
                 alt={`Apicultura natural ${index + 1}`}
                 className="w-full h-64 object-cover"
               />

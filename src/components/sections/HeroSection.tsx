@@ -24,11 +24,10 @@ export const HeroSection = () => {
       <div className="container mx-auto text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg font-dancing">
-            Apicultura que <span className="text-accent">Regenera</span> la Naturaleza
+            Apicultura <span className="text-accent">Natural</span> Regenerativa
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed animate-fade-in drop-shadow-md font-light">
-            Somos una red de apicultores comprometidos con prácticas sostenibles que respetan
-            el equilibrio natural y fortalecen los ecosistemas locales
+            Somos una red de apicultores comprometidos con prácticas sostenibles que utiliza como guía de sus intervenciones los propios patrones de comportamiento y ciclos naturales de las abejas, logrando de esta manera establecer modelos productivos éticos, rentables y de bajo consumo de insumos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

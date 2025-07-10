@@ -19,16 +19,8 @@ export const Footer = () => {
         </p>
         <div className="flex justify-center space-x-6 text-primary-foreground/80">
           <div className="flex items-center">
-            <MapPin className="w-4 h-4 mr-2" />
-            Latinoamérica
-          </div>
-          <div className="flex items-center">
-            <Phone className="w-4 h-4 mr-2" />
-            +1 234 567 890
-          </div>
-          <div className="flex items-center">
             <Mail className="w-4 h-4 mr-2" />
-            info@apicultura-regenerativa.org
+            anrchile.ag@gmail.com
           </div>
         </div>
       </div>

@@ -7,44 +7,28 @@ import { toast } from 'sonner';
 
 const cursosDisponibles = [
   {
-    titulo: "Fundamentos de Apicultura Natural",
+    titulo: "Apicultura Natural Regenerativa",
     instructor: "Escuela de Apicultura Natural Regenerativa",
-    duracion: "8 semanas",
-    modalidad: "Online + Prácticas presenciales",
-    precio: "$120.000 CLP",
+    modalidad: "Online + videos técnicos",
     descripcion: "Curso completo que abarca desde los principios básicos hasta técnicas avanzadas de manejo regenerativo",
-    proximaFecha: "15 de Marzo, 2024",
-    nivel: "Principiante"
+    nivel: "Principiante",
+    enlace: "https://www.apiculturanatural.com/cursos/"
   },
   {
-    titulo: "Manejo Sanitario Natural",
+    titulo: "Servicio Sanitario Natural",
     instructor: "ApiVet",
-    duracion: "4 semanas",
-    modalidad: "Online",
-    precio: "$80.000 CLP",
-    descripcion: "Aprende a mantener colmenas saludables sin químicos, usando métodos naturales y preventivos",
-    proximaFecha: "22 de Marzo, 2024",
-    nivel: "Intermedio"
+    modalidad: "Presencial",
+    descripcion: "Evaluación del contexto, diagnóstico de las colmenas y plan de acción",
+    nivel: "Principiante",
+    enlace: "https://www.apivet.cl/servicios/"
   },
   {
-    titulo: "Productos de la Colmena",
-    instructor: "Valymu",
-    duracion: "6 semanas",
-    modalidad: "Híbrido",
-    precio: "$95.000 CLP",
-    descripcion: "Procesamiento y comercialización de miel, polen, propóleo y otros productos apícolas",
-    proximaFecha: "5 de Abril, 2024",
-    nivel: "Intermedio"
-  },
-  {
-    titulo: "Apicultura y Ecosistemas",
+    titulo: "Apicultura Natural Regenerativa",
     instructor: "Raíces del Viento",
-    duracion: "5 semanas",
-    modalidad: "Online",
-    precio: "$70.000 CLP",
-    descripcion: "Comprende la relación entre las abejas y su entorno para crear sistemas regenerativos",
-    proximaFecha: "12 de Abril, 2024",
-    nivel: "Avanzado"
+    modalidad: "Presencial",
+    descripcion: "En este curso introductorio aprenderás sobre los manejos básicos de la apicultura natural regenerativa, tanto el manejo dentro de la colmena como el manejo alrededor del apiario",
+    nivel: "Principiante",
+    enlace: "https://raicesdelviento.org/anr/"
   }
 ];
 
@@ -57,7 +41,7 @@ export const CoursesSection = () => {
             Cursos y Formación
           </h3>
           <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-            Aprende de los mejores. Nuestros integrantes ofrecen formación especializada 
+            Aprende de los mejores. Nuestros integrantes ofrecen formación especializada y servicios
             en diferentes aspectos de la apicultura natural regenerativa
           </p>
         </div>
@@ -75,11 +59,10 @@ export const CoursesSection = () => {
                       por {curso.instructor}
                     </p>
                     <div className="flex items-center gap-2 mb-3">
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                        curso.nivel === 'Principiante' ? 'bg-green-100 text-green-800' :
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${curso.nivel === 'Principiante' ? 'bg-green-100 text-green-800' :
                         curso.nivel === 'Intermedio' ? 'bg-amber-100 text-amber-800' :
-                        'bg-red-100 text-red-800'
-                      }`}>
+                          'bg-red-100 text-red-800'
+                        }`}>
                         {curso.nivel}
                       </span>
                     </div>
@@ -95,30 +78,19 @@ export const CoursesSection = () => {
 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Duración:</span>
-                    <span className="font-medium">{curso.duracion}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
                     <span className="text-sm text-muted-foreground">Modalidad:</span>
                     <span className="font-medium">{curso.modalidad}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Próxima fecha:</span>
-                    <span className="font-medium flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {curso.proximaFecha}
-                    </span>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between pt-4 border-t border-border">
-                  <div>
-                    <span className="text-2xl font-bold text-primary">{curso.precio}</span>
-                  </div>
                   <Button
-                    onClick={() => toast.success("Información enviada", {
-                      description: "Te contactaremos pronto con más detalles del curso"
-                    })}
+                    onClick={() => {
+                      window.open(`${curso.enlace}`, "_blank");
+                      toast.success("Información enviada", {
+                        description: "Te contactaremos pronto con más detalles del curso"
+                      })
+                    }}
                     className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 rounded-full transition-all duration-300"
                   >
                     Más Información
@@ -127,26 +99,6 @@ export const CoursesSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 text-primary-foreground">
-            <Star className="w-12 h-12 mx-auto mb-4" />
-            <h4 className="text-2xl font-bold mb-3 font-dancing">
-              ¿Eres instructor y quieres unirte?
-            </h4>
-            <p className="text-primary-foreground/90 mb-6 font-light">
-              Si eres apicultor con experiencia y quieres compartir tus conocimientos, 
-              te invitamos a formar parte de nuestra red de instructores
-            </p>
-            <Button
-              onClick={() => window.open('mailto:cursos@apicultura-regenerativa.org', '_blank')}
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-2 rounded-full"
-            >
-              Ser Instructor
-            </Button>
-          </div>
         </div>
       </div>
     </section>

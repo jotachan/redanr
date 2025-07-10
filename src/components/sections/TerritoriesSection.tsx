@@ -14,13 +14,13 @@ export const TerritoriesSection = () => {
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             {[
-              { region: "Montañas Andinas", image: "photo-1518495973542-4542c06a5843" },
-              { region: "Valles Centrales", image: "photo-1509316975850-ff9c5deb0cd9" },
-              { region: "Costas Pacíficas", image: "photo-1465146344425-f00d5f5c8f07" }
+              { region: "Cordillera", image: "1.jpeg" },
+              { region: "Valle Central", image: "apiario 3.png" },
+              { region: "Costa", image: "apiario 5.png" }
             ].map((territorio, index) => (
               <div key={index} className="relative">
                 <img
-                  src={`https://images.unsplash.com/${territorio.image}?auto=format&fit=crop&w=300&h=200`}
+                  src={`images/photos/${territorio.image}`}
                   alt={territorio.region}
                   className="w-full h-48 object-cover rounded-lg"
                 />

@@ -6,27 +6,27 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const contenidoDigital = [
   {
-    titulo: "Conversaciones Regenerativas",
-    descripcion: "Podcast semanal donde exploramos la sabiduría ancestral de la apicultura",
+    titulo: "Abeja Rebelde",
+    descripcion: "Un espacio para cuestionar lo que nos han dicho sobre las abejas y la apicultura",
     icono: Podcast,
     plataforma: "Spotify",
-    enlace: "https://open.spotify.com",
+    enlace: "https://open.spotify.com/show/7iQEqGHFAuOPs2FM24lLbx?si=4884ac75c06f4a25",
     color: "bg-gradient-to-br from-green-600 to-emerald-700"
   },
   {
-    titulo: "Documentales en Vivo",
-    descripcion: "Experiencias inmersivas desde nuestros apiarios en diferentes territorios",
+    titulo: "Abeja Rebelde",
+    descripcion: "Ni todo lo que vuela es libre, ni todo lo que hacemos tiene sentido",
     icono: Video,
     plataforma: "YouTube",
-    enlace: "https://youtube.com",
+    enlace: "https://www.youtube.com/@AbejaRebelde",
     color: "bg-gradient-to-br from-amber-600 to-orange-700"
   },
   {
-    titulo: "Comunidad Instagram",
-    descripcion: "Síguenos para contenido diario, tips y conexión con la comunidad apícola",
+    titulo: "Red ANR Instagram",
+    descripcion: "Síguenos para contenido, tips y conexión con la comunidad apícola",
     icono: Instagram,
     plataforma: "Instagram",
-    enlace: "https://instagram.com/redapiculturanatural",
+    enlace: "https://www.instagram.com/redanrchile/",
     color: "bg-gradient-to-br from-pink-600 to-purple-600"
   }
 ];
@@ -40,11 +40,11 @@ export const DigitalContentSection = () => {
             Ecosistema Digital Regenerativo
           </h3>
           <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-            Conectamos saberes ancestrales con tecnología moderna para compartir conocimiento 
-            sobre apicultura regenerativa en múltiples formatos
+            Conectamos saberes con tecnología para compartir conocimiento
+            sobre apicultura natural regenerativa en múltiples formatos
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           {contenidoDigital.map((contenido, index) => (
             <Card key={index} className="bg-card hover:shadow-xl transition-all duration-300 hover:scale-105 border-border overflow-hidden group">
@@ -70,25 +70,6 @@ export const DigitalContentSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-border">
-            <Mic className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h4 className="text-2xl font-bold text-primary mb-3 font-dancing">
-              ¿Tienes una historia que contar?
-            </h4>
-            <p className="text-muted-foreground mb-6 font-light">
-              Invitamos a apicultores de toda Latinoamérica a compartir sus experiencias y conocimientos
-            </p>
-            <Button
-              onClick={() => window.open('mailto:info@apicultura-regenerativa.org', '_blank')}
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-2 rounded-full"
-            >
-              Participar en el Podcast
-            </Button>
-          </div>
         </div>
       </div>
     </section>

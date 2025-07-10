@@ -12,16 +12,16 @@ export const ContactSection = () => {
           </h3>
           <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-12 text-primary-foreground">
             <p className="text-2xl font-light mb-6 italic">
-              "Cada colmena es un universo de sabiduría ancestral. Cada abeja, un maestro de la sostenibilidad.
+              "Cada colmena es un universo. Cada abeja, un maestro.
               Juntos, tejemos la red que regenera nuestros territorios."
             </p>
             <div className="flex items-center justify-center space-x-3 text-lg">
               <Mail className="w-6 h-6" />
               <a
-                href="mailto:info@apicultura-regenerativa.org"
+                href="mailto:anrchile.ag@gmail.com"
                 className="hover:text-accent transition-colors underline decoration-2 underline-offset-4 font-medium"
               >
-                info@apicultura-regenerativa.org
+                anrchile.ag@gmail.com
               </a>
             </div>
             <p className="text-primary-foreground/80 mt-4 font-light">

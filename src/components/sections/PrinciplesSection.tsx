@@ -8,7 +8,7 @@ const principios = [
     description: "Conoce y respeta los patrones de comportamiento y ciclos naturales del organismo colmena"
   },
   {
-    title: "Biodiversidad Activa", 
+    title: "Biodiversidad Activa",
     description: "Comprende a las abejas en tu contexto ecosistémico"
   },
   {
@@ -16,7 +16,7 @@ const principios = [
     description: "No ataques a tus colmenas con productos químicos y alimentos artificiales"
   },
   {
-    title: "Conocimiento Ancestral",
+    title: "Equilibrio Productivo",
     description: "Poliproductividad y equilibrio en las cosechas "
   },
   {

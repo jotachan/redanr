@@ -52,7 +52,7 @@ export const ProductsSection = () => {
             Productos de Nuestros Integrantes
           </h3>
           <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-            Descubre productos únicos elaborados por los miembros de nuestra red, 
+            Descubre productos únicos elaborados por los miembros de nuestra red,
             donde cada compra apoya directamente a apicultores regenerativos
           </p>
         </div>
@@ -62,8 +62,8 @@ export const ProductsSection = () => {
             <Card key={index} className="bg-card hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-border overflow-hidden group">
               <div className="relative">
                 <div className="h-48 bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src={tienda.imagen} 
+                  <img
+                    src={tienda.imagen}
                     alt={tienda.integrante}
                     className="w-24 h-24 object-contain transition-transform duration-300 group-hover:scale-110"
                   />
@@ -74,7 +74,7 @@ export const ProductsSection = () => {
                   </div>
                 </div>
               </div>
-              
+
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h4 className="text-2xl font-bold text-primary mb-2 font-dancing">
@@ -96,7 +96,7 @@ export const ProductsSection = () => {
                   </h5>
                   <div className="flex flex-wrap gap-2">
                     {tienda.productos.map((producto, idx) => (
-                      <span 
+                      <span
                         key={idx}
                         className="bg-accent/20 text-primary px-3 py-1 rounded-full text-sm font-medium"
                       >
@@ -116,26 +116,6 @@ export const ProductsSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-2xl p-8 border border-border">
-            <Droplet className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h4 className="text-2xl font-bold text-primary mb-3 font-dancing">
-              ¿Tienes productos para vender?
-            </h4>
-            <p className="text-muted-foreground mb-6 font-light">
-              Si eres miembro de la red y tienes productos apícolas para ofrecer, 
-              podemos ayudarte a conectar con más clientes
-            </p>
-            <Button
-              onClick={() => window.open('mailto:ventas@apicultura-regenerativa.org', '_blank')}
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-2 rounded-full"
-            >
-              Publicar mis Productos
-            </Button>
-          </div>
         </div>
       </div>
     </section>
