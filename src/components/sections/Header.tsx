@@ -6,8 +6,9 @@ import { toast } from 'sonner';
 
 export const Header = () => {
   const handleDownload = () => {
+    window.open('https://drive.google.com/file/d/1KYNxkXAtS9uI8fhaZjSNjShyJ855uHdf/view', '_blank');
     toast.success("Descarga iniciada", {
-      description: "El documento de estándares se está descargando"
+      description: "El documento de estándares se está abriendo"
     });
   };
 
